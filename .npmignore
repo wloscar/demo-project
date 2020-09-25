@@ -1,0 +1,12 @@
+/node_modules
+/.cache
+/.vscode
+/.idea
+/.temp
+/.DS_Store
+/coverage
+/.nyc_output
+/npm-debug.log
+/.node
+/tests
+/packages
