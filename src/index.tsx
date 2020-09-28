@@ -8,7 +8,6 @@ import { mockProps } from "./mocks";
 let container: HTMLElement;
 
 export async function bootstrap() {}
-
 export async function mount(props: any) {
   const myProps = { ...mockProps, ...props };
   container = myProps.container;

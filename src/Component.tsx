@@ -3,7 +3,7 @@
  */
 import * as React from "react";
 import * as echarts from "echarts";
-import { BIComponentProps } from "@alife/bi-component-types";
+// import { BIComponentProps } from "@alife/bi-component-types";
 import "./Component.scss";
 import { CommonColorSeries } from "./config";
 

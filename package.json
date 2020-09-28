@@ -4,7 +4,7 @@
   "author": "",
   "description": "",
   "scripts": {
-    "start": "BROWSER=none PORT=8001 react-app-rewired start",
+    "start": "BROWSER=none PORT=8001 HTTPS=true react-app-rewired start",
     "clean": "rm build/asset-manifest.json && rm build/service-worker.js",
     "build": "react-app-rewired build && npm run clean",
     "copy": "cp package.json build/package.json",

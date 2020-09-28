@@ -25,7 +25,7 @@ function rewireWebpack(config, env) {
 function rewireDevServer(config) {
   config.disableHostCheck = true;
   // 开启https模式
-  config.https = true;
+  // config.https = true;
   // 设置头部支持远程跨域调试
   config.headers = {
     "Access-Control-Allow-Origin": "*",
@@ -33,7 +33,7 @@ function rewireDevServer(config) {
       "Origin, X-Requested-With, Content-Type, Accept",
     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
   };
-  return config.plugins;
+  return config;
 }
 
 module.exports = {
