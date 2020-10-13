@@ -1,9 +1,9 @@
 /**
  * 导出组件的相关配置
  */
-import { BIComponentMeta } from "@alife/bi-component-types";
+import { Interfaces } from "@alife/bi-open-react-sdk";
 
-const componentMeta: BIComponentMeta = {
+const componentMeta: Interfaces.BIComponentMeta = {
   propsSchema: {
     styleSchema: {
       schema: {
@@ -148,5 +148,5 @@ const componentMeta: BIComponentMeta = {
       },
     },
   },
-} as BIComponentMeta;
+};
 export default componentMeta;

@@ -2,10 +2,26 @@
 # yarn lockfile v1
 
 
-"@alife/bi-component-types@1.0.0-qbi39-lhq-docs2.2":
-  version "1.0.0-qbi39-lhq-docs2.2"
-  resolved "https://registry.npm.alibaba-inc.com/@alife/bi-component-types/download/@alife/bi-component-types-1.0.0-qbi39-lhq-docs2.2.tgz#70387a8a0d484ec0a1f646ed8d640ae13b822281"
-  integrity sha1-cDh6ig1ITsCh9kbtjWQK4TuCIoE=
+"@alife/bi-component-types@1.0.0-qbi39-open.3":
+  version "1.0.0-qbi39-open.3"
+  resolved "https://registry.npm.alibaba-inc.com/@alife/bi-component-types/download/@alife/bi-component-types-1.0.0-qbi39-open.3.tgz#8877bcf5ba83fa1c5879dea55835f2a99a0ddc02"
+  integrity sha1-iHe89bqD+hxYed6lWDXyqZoN3AI=
+
+"@alife/bi-open-react-sdk@1.0.0-qbi39-open.3":
+  version "1.0.0-qbi39-open.3"
+  resolved "https://registry.npm.alibaba-inc.com/@alife/bi-open-react-sdk/download/@alife/bi-open-react-sdk-1.0.0-qbi39-open.3.tgz#09f1d739002bbcbd3b614e006a348f862fc356d9"
+  integrity sha1-CfHXOQArvL07YU4AajSPhi/DVtk=
+  dependencies:
+    "@alife/bi-open" "1.0.0-qbi39-open.3"
+    react "^16.12.0"
+    react-dom "^16.12.0"
+
+"@alife/bi-open@1.0.0-qbi39-open.3":
+  version "1.0.0-qbi39-open.3"
+  resolved "https://registry.npm.alibaba-inc.com/@alife/bi-open/download/@alife/bi-open-1.0.0-qbi39-open.3.tgz#b65d2a82d4b71321b1058e45bb90c1f9ad1f9ae7"
+  integrity sha1-tl0qgtS3EyGxBY5Fu5DB+a0fmuc=
+  dependencies:
+    "@alife/bi-component-types" "1.0.0-qbi39-open.3"
 
 "@ant-design/colors@^3.1.0":
   version "3.2.2"
