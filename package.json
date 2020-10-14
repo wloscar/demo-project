@@ -14,7 +14,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@alife/bi-open-react-sdk": "1.0.0-qbi39-open.3",
+    "bi-open-react-sdk": "1.0.0-qbi39-lhq-open.2",
     "@types/echarts": "^4.6.5",
     "@types/react-dom": "^16.9.8",
     "babel-plugin-import": "^1.13.0",

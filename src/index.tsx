@@ -3,10 +3,14 @@
  */
 import * as React from "react";
 import * as echarts from "echarts";
-import { Interfaces, createBIComponent } from "@alife/bi-open-react-sdk";
+import { Interfaces, createBIComponent } from "bi-open-react-sdk";
 import componentMeta from "./meta";
 import { CommonColorSeries } from "./config";
 import "./index.scss";
+enum ColorSerie {
+  "business" = "business",
+  "classic" = "classic",
+}
 class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
   componentDidMount() {
     this.initChart(this.props);
@@ -19,12 +23,12 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
   private chartRootDomRef: HTMLDivElement;
 
   private initChart(props: any) {
+    console.log(props);
     const data = this.props.data;
     const dataConfig = this.props.dataConfig as any;
     const viewConfig = this.props.viewConfig as any;
-    const chartsTheme = this.props.globalConfig.setting.chartsTheme as
-      | "business"
-      | "classic";
+    const chartsTheme = this.props.globalConfig.setting
+      .chartsTheme as ColorSerie;
     const colorSeries = CommonColorSeries[chartsTheme].colors;
     const measureInfo = dataConfig[2];
     // 转置矩阵
