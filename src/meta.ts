@@ -92,7 +92,7 @@ const componentMeta: Interfaces.BIComponentMeta = {
         },
       },
     },
-    cubeSchema: {
+    dataSchema: {
       schema: {
         area: [
           {
