@@ -14,10 +14,10 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "bi-open-react-sdk": "1.0.0-qbi39-lhq-open.2",
     "@types/echarts": "^4.6.5",
     "@types/react-dom": "^16.9.8",
     "babel-plugin-import": "^1.13.0",
+    "bi-open-react-sdk": "^1.0.0-qbi39-open.5",
     "customize-cra": "^1.0.0",
     "node-sass": "^4.14.1",
     "react-app-rewired": "^2.1.6",

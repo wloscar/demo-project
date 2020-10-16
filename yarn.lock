@@ -2275,26 +2275,26 @@ bfj@6.1.1:
     hoopy "^0.1.2"
     tryer "^1.0.0"
 
-bi-component-types@1.0.0-qbi39-lhq-open.39:
-  version "1.0.0-qbi39-lhq-open.39"
-  resolved "https://registry.npm.alibaba-inc.com/bi-component-types/download/bi-component-types-1.0.0-qbi39-lhq-open.39.tgz#952cd4bb4ad845b63c7e81377257d9db593ae482"
-  integrity sha1-lSzUu0rYRbY8foE3clfZ21k65II=
-
-bi-open-react-sdk@1.0.0-qbi39-lhq-open.2:
-  version "1.0.0-qbi39-lhq-open.2"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open-react-sdk/download/bi-open-react-sdk-1.0.0-qbi39-lhq-open.2.tgz#879a217229a44057a781629454ec832d710f9249"
-  integrity sha1-h5ohcimkQFengWKUVOyDLXEPkkk=
+bi-open-react-sdk@^1.0.0-qbi39-open.5:
+  version "1.0.0-qbi39-open.5"
+  resolved "https://registry.yarnpkg.com/bi-open-react-sdk/-/bi-open-react-sdk-1.0.0-qbi39-open.5.tgz#aa6acdef29c365d45d1ce9da38536da9fd80a03e"
+  integrity sha512-XVAoDO1IUH40DPWO+80wfUTt7BODt27x3SRTlyx4iFbbcg/xP5MEC/72JppCDy4wIXpLaBdp8PkCdpcgzxK3tA==
   dependencies:
-    bi-open "1.0.0-qbi39-lhq-open.3"
+    bi-open "1.0.0-qbi39-open.6"
     react "^16.12.0"
     react-dom "^16.12.0"
 
-bi-open@1.0.0-qbi39-lhq-open.3:
-  version "1.0.0-qbi39-lhq-open.3"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-1.0.0-qbi39-lhq-open.3.tgz#3efdf16b3e36d10eea55076862cf4016d3503cd2"
-  integrity sha1-Pv3xaz420Q7qVQdoYs9AFtNQPNI=
+bi-open@1.0.0-qbi39-open.6:
+  version "1.0.0-qbi39-open.6"
+  resolved "https://registry.yarnpkg.com/bi-open/-/bi-open-1.0.0-qbi39-open.6.tgz#2f1ecd79589c60aa36644c855b2bf8330dfc85b2"
+  integrity sha512-iLtEu0PrXjUKOdnFisejD5dH/+vlmohCpPG+PZn02q0GXf0BY45Bfk9s4BirCAIX+sLyk013hB9t5InNsonCJA==
   dependencies:
-    bi-component-types "1.0.0-qbi39-lhq-open.39"
+    bi-types "1.0.0-qbi39-open.6"
+
+bi-types@1.0.0-qbi39-open.6:
+  version "1.0.0-qbi39-open.6"
+  resolved "https://registry.yarnpkg.com/bi-types/-/bi-types-1.0.0-qbi39-open.6.tgz#30b01f21d092de13c812577aae6603867c9fcfdf"
+  integrity sha512-EUKI5j1AdSE36V063+ibExY1QbP6qqGXzIPe5oIdf48Z7KxXfCimD6bkzsciaFgYQWREzUQfCMJeWAmFZDRNrg==
 
 big.js@^5.2.2:
   version "5.2.2"
