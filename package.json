@@ -17,17 +17,17 @@
     "@types/echarts": "^4.6.5",
     "@types/react-dom": "^16.9.8",
     "babel-plugin-import": "^1.13.0",
-    "bi-open-react-sdk": "^1.0.0-qbi39-open.5",
+    "bi-open-react-sdk": "1.0.0-featqbi-310-open.1",
     "customize-cra": "^1.0.0",
     "node-sass": "^4.14.1",
     "react-app-rewired": "^2.1.6",
     "react-scripts": "^2.1.3",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "@types/lodash": "^4.14.165",
+    "antd": "^3.6.1"
   },
   "dependencies": {
-    "antd": "^3.6.1",
     "echarts": "^4.8.0",
-    "lodash": "^4.17.10",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

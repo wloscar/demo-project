@@ -3,7 +3,8 @@
  */
 import * as React from "react";
 import * as echarts from "echarts";
-import { Interfaces, createBIComponent } from "bi-open-react-sdk";
+import { Interfaces, Utils, createBIComponent } from "bi-open-react-sdk";
+import * as _ from "lodash";
 import componentMeta from "./meta";
 import { CommonColorSeries } from "./config";
 import "./index.scss";
@@ -13,6 +14,7 @@ enum ColorSerie {
 }
 class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
   componentDidMount() {
+    this.echartInstance = echarts.init(this.chartRootDomRef);
     this.initChart(this.props);
   }
 
@@ -22,6 +24,7 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
 
   private chartRootDomRef: HTMLDivElement;
 
+  private echartInstance: any;
   private initChart(props: any) {
     console.log(props);
     const data = this.props.data;
@@ -32,27 +35,26 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
     const colorSeries = CommonColorSeries[chartsTheme].colors;
     const measureInfo = dataConfig[2];
     // 转置矩阵
-    const result = data[0].map((col: any, i: number) =>
-      data.map((row: any) => row[i])
-    );
+    const result = Utils.transpose(data);
     const legend = [];
     const category = result[0].map((item: any) => item.value);
     const series = [];
     for (let i = 1; i < result.length; i++) {
+      const field = measureInfo.fields[i - 1];
       const serie = {
         type: "bar",
         data: result[i],
         coordinateSystem: "polar",
-        name: measureInfo.fields[i - 1].showName,
+        name: Utils.getAliasName(field, props),
         color: colorSeries[i - 1],
       };
-      legend.push(measureInfo.fields[i - 1].showName);
+      legend.push(Utils.getAliasName(field, props));
       series.push(serie);
     }
-    const myChart = echarts.init(this.chartRootDomRef);
+
     const option = {
       angleAxis: {
-        max: 4,
+        max: "dataMax",
         startAngle: viewConfig.display.startAngle,
         splitLine: {
           show: false,
@@ -65,13 +67,19 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
       },
       polar: {},
       series,
+      tooltip: {
+        show: true,
+        trigger: "item",
+      },
       legend: {
         show: viewConfig.display.showLegend,
         data: legend,
       },
     };
     // 绘制图表
-    myChart.setOption(option);
+    this.echartInstance.setOption(option, true);
+    // 重新resize
+    this.echartInstance.resize();
   }
 
   render() {

@@ -11,59 +11,7 @@ const componentMeta: Interfaces.BIComponentMeta = {
         className: "tabs-uischema-container",
         props: { mode: "collapse" },
         properties: {
-          basic: {
-            type: "object",
-            title: "基础信息",
-            properties: {
-              show: {
-                type: "switch",
-                id: "title",
-                redirect: "title.show",
-                propertyOrder: 1,
-                props: {
-                  mode: "checkbox",
-                  label: "显示标题",
-                },
-              },
-              captionContainer: {
-                type: "object",
-                className: "basic-title-tabs-caption-container",
-                disableDepends: [{ id: "title", value: false }],
-                propertyOrder: 2,
-                properties: {
-                  titleAndColor: {
-                    type: "object",
-                    title: "主标题",
-                    className: "basic-title-caption-title-color",
-                    properties: {
-                      caption: {
-                        type: "string",
-                        redirect: "caption",
-                        props: {
-                          maxLength: 50,
-                          placeholder: "主标题",
-                        },
-                      },
-                    },
-                  },
-                  tabsColor: {
-                    type: "color",
-                    props: { disableAlpha: true },
-                    redirect: "title.color",
-                  },
-                  viceName: {
-                    title: "备注",
-                    type: "string",
-                    redirect: "title.viceName",
-                    props: {
-                      placeholder: "请输入备注",
-                      maxLength: 140,
-                    },
-                  },
-                },
-              },
-            },
-          },
+          // 请在此处填写你需要自定义的属性
           display: {
             type: "object",
             title: "显示设置",
