@@ -21,7 +21,6 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
   componentDidUpdate() {
     this.initChart(this.props);
   }
-
   private chartRootDomRef: HTMLDivElement;
 
   private echartInstance: any;
@@ -43,7 +42,7 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
       const field = measureInfo.fields[i - 1];
       const serie = {
         type: "bar",
-        data: result[i],
+        data: this.reviseData4Echarts(result[i]),
         coordinateSystem: "polar",
         name: Utils.getAliasName(field, props),
         color: colorSeries[i - 1],
@@ -69,7 +68,22 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
       series,
       tooltip: {
         show: true,
-        trigger: "item",
+        trigger: "axis",
+        formatter: (params: any) => {
+          const res = [];
+          res.push(params[0].name);
+          // 对显示数据进行格式化
+          params.forEach((item: any) => {
+            res.push(
+              `${item.seriesName} : ${Utils.Format.numberWithConfig(
+                item.data.value,
+                null,
+                this.getConfigByFieldId(item.data.fieldId).numberFormat
+              )}`
+            );
+          });
+          return res.join("<br/>");
+        },
       },
       legend: {
         show: viewConfig.display.showLegend,
@@ -82,6 +96,26 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
     this.echartInstance.resize();
   }
 
+  /**
+   * 将quickBI依赖的数据模型转换成Echarts所需的模型
+   * @param data
+   */
+  private reviseData4Echarts(data: Array<Interfaces.IDataCell>) {
+    return data.map((item) => {
+      const { value, fieldId } = item;
+      return {
+        fieldId,
+        value: item.originValue,
+      };
+    });
+  }
+  /**
+   * 根据fieldId拿到度量上的配置
+   * @param fieldId 字段id
+   */
+  private getConfigByFieldId(fieldId: string) {
+    return (this.props.viewConfig as any).fieldSettingMap[fieldId] || {};
+  }
   render() {
     return (
       <div className="test-component">
