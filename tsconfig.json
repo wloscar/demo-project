@@ -4,19 +4,12 @@
     "moduleResolution": "node",
     "strict": true,
     "strictNullChecks": false,
-    "jsx": "preserve",
-    "target": "esnext",
+    "target": "ES6",
+    "sourceMap": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "outDir": "build",
-    "lib": [
-      "dom",
-      "es5",
-      "es6",
-      "es7",
-      "scripthost",
-      "es2018.promise"
-    ],
+    "lib": ["dom", "es5", "es6", "es7", "scripthost", "es2018.promise"],
     "emitDecoratorMetadata": true,
     "preserveConstEnums": true,
     "allowSyntheticDefaultImports": true,
@@ -24,10 +17,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "isolatedModules": true
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["src/**/*"]
 }
