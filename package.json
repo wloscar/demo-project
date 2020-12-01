@@ -14,11 +14,11 @@
   "license": "ISC",
   "devDependencies": {
     "@types/echarts": "^4.6.5",
-    "typescript": "^4.0.3",
-    "qbi-dev-tools": "0.1.5"
+    "qbi-dev-tools": "0.1.5",
+    "typescript": "^4.0.3"
   },
   "dependencies": {
-    "bi-open-sdk": "^1.0.0-qbi310-open.1",
+    "bi-open-sdk": "^1.0.0-qbi310.65",
     "echarts": "^4.8.0"
   },
   "browserslist": [

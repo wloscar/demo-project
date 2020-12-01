@@ -1412,26 +1412,26 @@ bfj@^6.1.1:
     hoopy "^0.1.4"
     tryer "^1.0.1"
 
-bi-open-sdk@^1.0.0-qbi310-open.1:
-  version "1.0.0-qbi310-open.1"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-1.0.0-qbi310-open.1.tgz#7413b64565cdc8902c732332f22a6c4b9adcb6f5"
-  integrity sha1-dBO2RWXNyJAscyMy8ipsS5rctvU=
+bi-open-sdk@^1.0.0-qbi310.65:
+  version "1.0.0-qbi310.65"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-1.0.0-qbi310.65.tgz#583ee142ce3f43fc3348a547556c9c8c6101eed7"
+  integrity sha1-WD7hQs4/Q/wzSKVHVWycjGEB7tc=
   dependencies:
-    bi-open "1.0.0-qbi310-open.1"
+    bi-open "1.0.0-qbi310.1"
 
-bi-open@1.0.0-qbi310-open.1:
-  version "1.0.0-qbi310-open.1"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-1.0.0-qbi310-open.1.tgz#df2ec96dec95aa19e4758d5c0b68f3f1425c5e96"
-  integrity sha1-3y7JbeyVqhnkdY1cC2jz8UJcXpY=
+bi-open@1.0.0-qbi310.1:
+  version "1.0.0-qbi310.1"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-1.0.0-qbi310.1.tgz#83feb3731511ee508e962afd360006207e7345cb"
+  integrity sha1-g/6zcxUR7lCOlir9NgAGIH5zRcs=
   dependencies:
-    bi-types "1.0.0-qbi310-open.1"
+    bi-types "1.0.0-qbi310.1"
     big.js "5.2.2"
     lodash "^4.17.15"
 
-bi-types@1.0.0-qbi310-open.1:
-  version "1.0.0-qbi310-open.1"
-  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-1.0.0-qbi310-open.1.tgz#838574100c8353f9e272673b9b931197e1fbb9bf"
-  integrity sha1-g4V0EAyDU/nicmc7m5MRl+H7ub8=
+bi-types@1.0.0-qbi310.1:
+  version "1.0.0-qbi310.1"
+  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-1.0.0-qbi310.1.tgz#dc30927a57dbb9a3bc411f6fc5355b3271a55f28"
+  integrity sha1-3DCSelfbuaO8QR9vxTVbMnGlXyg=
 
 big.js@5.2.2, big.js@^5.2.2:
   version "5.2.2"
@@ -6607,10 +6607,8 @@ watchpack@^1.7.4:
   resolved "https://registry.npm.alibaba-inc.com/watchpack/download/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha1-EmfmxV4Lm1vkTCAjrtVDeiwmxFM=
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
