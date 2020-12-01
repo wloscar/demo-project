@@ -97,4 +97,5 @@ const componentMeta: Interfaces.BIComponentMeta = {
     },
   },
 };
+
 export default componentMeta;

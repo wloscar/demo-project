@@ -5176,10 +5176,10 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.npm.alibaba-inc.com/punycode/download/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha1-tYsBCsQMIsVldhbI0sLALHv0eew=
 
-qbi-dev-tools@0.1.4-beta10:
-  version "0.1.4-beta10"
-  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-0.1.4-beta10.tgz#abaeff8311152e4de99ae6c35afb51aea1a83994"
-  integrity sha1-q67/gxEVLk3pmubDWvtRrqGoOZQ=
+qbi-dev-tools@0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-0.1.5.tgz#88c1e7d0f0fbb0cc3d3a8cc55bcef6caece7adb7"
+  integrity sha1-iMHn0PD7sMw9OozFW872yuznrbc=
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/plugin-syntax-dynamic-import" "7.8.3"
@@ -6607,8 +6607,10 @@ watchpack@^1.7.4:
   resolved "https://registry.npm.alibaba-inc.com/watchpack/download/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha1-EmfmxV4Lm1vkTCAjrtVDeiwmxFM=
   dependencies:
+    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
+    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
