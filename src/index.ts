@@ -5,7 +5,7 @@ import * as echarts from "echarts";
 import { Interfaces, createBIComponent } from "bi-open-sdk";
 import componentMeta from "./meta";
 import { CommonColorSeries } from "./config";
-import "./index.scss";
+import "./index.less";
 enum ColorSerie {
   "business" = "business",
   "classic" = "classic",
