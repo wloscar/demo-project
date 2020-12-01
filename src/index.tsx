@@ -74,13 +74,17 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
           res.push(params[0].name);
           // 对显示数据进行格式化
           params.forEach((item: any) => {
-            res.push(
-              `${item.seriesName} : ${Utils.Format.numberWithConfig(
-                item.data.value,
-                null,
-                this.getConfigByFieldId(item.data.fieldId).numberFormat
-              )}`
-            );
+            if (this.getConfigByFieldId(item.data.fieldId)) {
+              res.push(
+                `${item.seriesName} : ${Utils.Format.numberWithConfig(
+                  item.data.value,
+                  null,
+                  this.getConfigByFieldId(item.data.fieldId).numberFormat
+                )}`
+              );
+            } else {
+              res.push(`${item.seriesName} : ${item.data.value}`);
+            }
           });
           return res.join("<br/>");
         },
@@ -114,7 +118,7 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
    * @param fieldId 字段id
    */
   private getConfigByFieldId(fieldId: string) {
-    return (this.props.viewConfig as any).fieldSettingMap[fieldId] || {};
+    return (this.props.viewConfig as any).fieldSettingMap[fieldId] || null;
   }
   render() {
     return (
