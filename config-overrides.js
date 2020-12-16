@@ -7,17 +7,30 @@ const {
   addBabelPlugins,
   disableChunk,
 } = require("customize-cra");
-const fs = require("fs");
-const msep = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // 定制webpack配置
 function rewireWebpack(config, env) {
-  config.output.filename = "main.js";
+  config.output.filename = "[name].js";
+  config.entry = {
+    meta: "./src/meta.ts",
+    main: "./src/index.tsx",
+  };
   config.output.library = "BIComponent";
   config.output.libraryTarget = "umd";
   // 调整css打包地址
-  if (config.mode === "production") {
-    const cssPlugin = config.plugins.find((plugin) => plugin instanceof msep);
+  const cssPlugin = config.plugins.find(
+    (plugin) => plugin instanceof MiniCssExtractPlugin
+  );
+
+  if (cssPlugin) {
     cssPlugin.options.filename = "main.css";
+  } else {
+    config.plugins.push(
+      new MiniCssExtractPlugin({
+        filename: "main.css",
+        chunkFilename: "[id].css",
+      })
+    );
   }
   return config;
 }
@@ -25,7 +38,7 @@ function rewireWebpack(config, env) {
 function rewireDevServer(config) {
   config.disableHostCheck = true;
   // 开启https模式
-  // config.https = true;
+  config.https = true;
   // 设置头部支持远程跨域调试
   config.headers = {
     "Access-Control-Allow-Origin": "*",

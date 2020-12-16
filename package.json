@@ -4,27 +4,28 @@
   "author": "",
   "description": "",
   "scripts": {
-    "start": "BROWSER=none PORT=8001 HTTPS=true react-app-rewired start",
-    "clean": "rm build/asset-manifest.json && rm build/service-worker.js",
-    "build": "react-app-rewired build && npm run clean",
-    "copy": "cp package.json build/package.json",
-    "zip": "cd build && zip -q -r component.zip main.css main.js package.json&& cd ..",
-    "pack": "rm -rf build && npm run build && npm run copy && npm run zip",
+    "start": "cross-env BROWSER=none PORT=8001 HTTPS=true react-app-rewired start",
+    "clean": "cross-env rm build/asset-manifest.json && rm build/service-worker.js",
+    "build": "cross-env react-app-rewired build && npm run clean",
+    "copy": "cross-env cp package.json build/package.json",
+    "zip": "cross-env cd build && zip -q -r component.zip main.css main.js package.json&& cd ..",
+    "pack": "cross-env rm -rf build && npm run build && npm run copy && npm run zip",
     "test": "jest"
   },
   "license": "ISC",
   "devDependencies": {
     "@types/echarts": "^4.6.5",
+    "@types/lodash": "^4.14.165",
     "@types/react-dom": "^16.9.8",
+    "antd": "^3.6.1",
     "babel-plugin-import": "^1.13.0",
     "bi-open-react-sdk": "1.0.0-featqbi-310-open.1",
+    "cross-env": "^7.0.3",
     "customize-cra": "^1.0.0",
     "node-sass": "^4.14.1",
     "react-app-rewired": "^2.1.6",
     "react-scripts": "^2.1.3",
-    "typescript": "^4.0.3",
-    "@types/lodash": "^4.14.165",
-    "antd": "^3.6.1"
+    "typescript": "^4.0.3"
   },
   "dependencies": {
     "echarts": "^4.8.0",

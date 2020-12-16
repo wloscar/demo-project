@@ -122,7 +122,7 @@ class MyComponent extends React.Component<Interfaces.BIComponentProps, any> {
   }
   render() {
     return (
-      <div className="test-component">
+      <div className="test-component" style={{ width: "100%", height: "100%" }}>
         <div
           className="chart-container"
           ref={(ref) => {
