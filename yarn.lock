@@ -4885,10 +4885,10 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.npm.alibaba-inc.com/punycode/download/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha1-tYsBCsQMIsVldhbI0sLALHv0eew=
 
-qbi-dev-tools@0.1.9:
-  version "0.1.9"
-  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-0.1.9.tgz#e75d34e9ae6335bbbf1b6fed2a62f96754cc88b3"
-  integrity sha1-51006a5jNbu/G2/tKmL5Z1TMiLM=
+qbi-dev-tools@^0.1.11:
+  version "0.1.11"
+  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-0.1.11.tgz#93fa4532366b4c8253edfb1538e8a54b2806e6e9"
+  integrity sha1-k/pFMjZrTIJT7fsVOOilSygG5uk=
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/plugin-syntax-dynamic-import" "7.8.3"
