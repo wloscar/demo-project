@@ -4,7 +4,6 @@
 import * as React from "react";
 import * as echarts from "echarts";
 import { Interfaces, Utils, createBIComponent } from "bi-open-react-sdk";
-import * as _ from "lodash";
 import componentMeta from "./meta";
 import { CommonColorSeries } from "./config";
 import "./index.scss";
