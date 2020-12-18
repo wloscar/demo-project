@@ -70,6 +70,8 @@ class MyComponent {
 
   mount(props: Interfaces.BIComponentLifecycleProps) {
     const root = document.createElement("div");
+    root.style.width = "100%";
+    root.style.height = "100%";
     root.classList.add("test-component");
     props.container.appendChild(root);
     this.chart = echarts.init(root);
