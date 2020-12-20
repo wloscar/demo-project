@@ -37,8 +37,6 @@ function rewireWebpack(config, env) {
 // 定制webpackDevServer的配置
 function rewireDevServer(config) {
   config.disableHostCheck = true;
-  // 开启https模式
-  config.https = true;
   // 设置头部支持远程跨域调试
   config.headers = {
     "Access-Control-Allow-Origin": "*",
