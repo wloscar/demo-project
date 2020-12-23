@@ -5,17 +5,26 @@ const {
   override,
   overrideDevServer,
   addBabelPlugins,
+  addWebpackPlugin,
   disableChunk,
 } = require("customize-cra");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 // 定制webpack配置
 function rewireWebpack(config, env) {
-  config.output.filename = "[name].js";
-  config.entry = {
-    meta: "./src/meta.ts",
-    main: "./src/index.tsx",
+  config.output.filename = (pathData) => {
+    const outputMapping = {
+      BIComponentMeta: "meta.js",
+      BIComponent: "main.js",
+    };
+
+    return outputMapping[pathData.chunk.name] || "[name].js";
   };
-  config.output.library = "BIComponent";
+  config.entry = {
+    BIComponentMeta: "./src/meta.ts",
+    BIComponent: "./src/index.tsx",
+  };
+  config.output.library = "[name]";
   config.output.libraryTarget = "umd";
   // 调整css打包地址
   const cssPlugin = config.plugins.find(
