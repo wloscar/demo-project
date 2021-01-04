@@ -3,7 +3,7 @@
  */
 import { Interfaces } from "bi-open-react-sdk";
 
-const componentMeta: Interfaces.BIComponentMeta = {
+const componentMeta: Interfaces.ComponentMeta = {
   propsSchema: {
     styleSchema: {
       schema: {
@@ -57,12 +57,12 @@ const componentMeta: Interfaces.BIComponentMeta = {
             columnList: [],
           },
           {
-            id: "area_onerow",
+            id: "area_row",
             areaName: "维度",
             queryAxis: "row",
             rule: {
               type: "dimension", // 维度还是计量,都可以接受为all
-              maxColNum: 1, // 最多允许的字段数
+              // maxColNum: 1, // 最多允许的字段数
               required: true, // 是否是更新图标必须字段
             },
             columnList: [],
@@ -73,7 +73,7 @@ const componentMeta: Interfaces.BIComponentMeta = {
             queryAxis: "column",
             rule: {
               type: "measure", // 维度还是计量,都可以接受为all
-              maxColNum: 3, // 最多允许的字段数
+              // maxColNum: 3, // 最多允许的字段数
               required: true, // 是否是更新图标必须字段
             },
             columnList: [],

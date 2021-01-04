@@ -3236,25 +3236,25 @@ bfj@^6.1.1:
     hoopy "^0.1.4"
     tryer "^1.0.1"
 
-bi-open-react-sdk@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open-react-sdk/download/bi-open-react-sdk-1.1.0.tgz#e2849748c04e89cfc364a14d68c3aeab5f7e88fb"
-  integrity sha1-4oSXSMBOic/DZKFNaMOuq19+iPs=
+bi-open-react-sdk@^2.0.0-beta:
+  version "2.0.0-beta"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open-react-sdk/download/bi-open-react-sdk-2.0.0-beta.tgz#61d92e8b6d1aae9e12d0249486b01416edcde104"
+  integrity sha1-Ydkui20arp4S0CSUhrAUFu3N4QQ=
   dependencies:
-    bi-open "1.1.0"
+    bi-open "2.0.0-beta"
 
-bi-open@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-1.1.0.tgz#0e21c3ae0dad7a9dd1e16bcd1a5b4b3757272449"
-  integrity sha1-DiHDrg2tep3R4WvNGltLN1cnJEk=
+bi-open@2.0.0-beta:
+  version "2.0.0-beta"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.0-beta.tgz#d4b22044ce52c0cce463a9673c200c2afdee59af"
+  integrity sha1-1LIgRM5SwMzkY6lnPCAMKv3uWa8=
   dependencies:
-    bi-types "1.0.0-qbi311.20"
+    bi-types "1.0.0-qbi311.24"
     big.js "5.2.2"
 
-bi-types@1.0.0-qbi311.20:
-  version "1.0.0-qbi311.20"
-  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-1.0.0-qbi311.20.tgz#6e44c52cdfd6346e9692fb7a52bbb44cea726213"
-  integrity sha1-bkTFLN/WNG6Wkvt6Uru0TOpyYhM=
+bi-types@1.0.0-qbi311.24:
+  version "1.0.0-qbi311.24"
+  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-1.0.0-qbi311.24.tgz#0e9aa7cf7db446cbdf3e0e0147b564dae6b8ee79"
+  integrity sha1-Dpqnz320RsvfPg4BR7Vk2ua47nk=
 
 big.js@5.2.2, big.js@^5.2.2:
   version "5.2.2"
