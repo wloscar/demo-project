@@ -130,8 +130,6 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo((props) => {
     [props?.data]
   );
 
-  console.log(111, props);
-
   return (
     <div
       className={`test-table ${
