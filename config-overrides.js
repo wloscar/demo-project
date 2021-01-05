@@ -4,6 +4,7 @@
 const {
   override,
   overrideDevServer,
+  addWebpackExternals,
   addBabelPlugins,
   addWebpackPlugin,
   disableChunk,
@@ -70,6 +71,12 @@ module.exports = {
         "antd-mobile",
       ]
     ),
+    addWebpackExternals({
+      react: "React",
+      "react-dom": "ReactDOM",
+      lodash: "_",
+      i18n: "i18n",
+    }),
     disableChunk(),
     rewireWebpack
   ),
