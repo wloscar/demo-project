@@ -2,27 +2,21 @@
  * @flie 开放组件入口文件
  */
 import * as echarts from "echarts";
-import { Interfaces, createBIComponent } from "bi-open-sdk";
-import { CommonColorSeries } from "./config";
+import { Interfaces } from "bi-open-sdk";
 import "./index.less";
-
-enum ColorSerie {
-  "business" = "business",
-  "classic" = "classic",
-}
 
 class MyComponent {
   chart: any;
 
-  setOption(props: Interfaces.BIComponentLifecycleProps) {
+  setOption(props: Interfaces.LifecycleProps) {
     if (this.chart) {
-      const customProps = props.customProps as Interfaces.BIComponentProps;
+      const customProps = props.customProps as Interfaces.ComponentProps;
       const data = customProps.data;
-      const dataConfig = customProps.dataConfig as any;
-      const viewConfig = customProps.viewConfig as any;
-      const chartsTheme = customProps.globalConfig.setting
-        .chartsTheme as ColorSerie;
-      const colorSeries = CommonColorSeries[chartsTheme].colors;
+      const dataConfig = customProps.dataConfig;
+      const viewConfig = customProps.viewConfig;
+
+      const colorSeries: any =
+        customProps.viewConfig?.chartColorSeries?.colors ?? [];
       const measureInfo = dataConfig[2];
       // 转置矩阵
       const result = data[0].map((col: any, i: number) =>
@@ -68,7 +62,19 @@ class MyComponent {
     }
   }
 
-  mount(props: Interfaces.BIComponentLifecycleProps) {
+  bindEvents(props: Interfaces.LifecycleProps) {
+    this.chart.on("click", "series", (serie: any) => {
+      //@ts-ignore
+      if (typeof props.customProps.action.select === "function") {
+        //@ts-ignore
+        props.customProps.action.select({
+          dataIndex: serie.dataIndex,
+        });
+      }
+    });
+  }
+
+  mount(props: Interfaces.LifecycleProps) {
     const root = document.createElement("div");
     root.style.width = "100%";
     root.style.height = "100%";
@@ -76,16 +82,17 @@ class MyComponent {
     props.container.appendChild(root);
     this.chart = echarts.init(root);
 
+    this.bindEvents(props);
     console.log("trigger when component mount");
     this.setOption(props);
   }
 
-  update(props: Interfaces.BIComponentLifecycleProps) {
+  update(props: Interfaces.LifecycleProps) {
     console.log("trigger when component update");
     this.setOption(props);
   }
 
-  umount(props: Interfaces.BIComponentLifecycleProps) {
+  umount(props: Interfaces.LifecycleProps) {
     console.log("trigger when component unmount");
   }
 }
