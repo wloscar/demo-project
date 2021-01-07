@@ -1425,25 +1425,25 @@ bfj@^6.1.1:
     hoopy "^0.1.4"
     tryer "^1.0.1"
 
-bi-open-sdk@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-1.1.0.tgz#8b4275afb79b47bfc4626f568a293405bf439752"
-  integrity sha1-i0J1r7ebR7/EYm9Wiik0Bb9Dl1I=
+bi-open-sdk@^2.0.0-beta:
+  version "2.0.0-beta"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-2.0.0-beta.tgz#e2d4101b9066331bf81d4186d2b3d48dee070bff"
+  integrity sha1-4tQQG5BmMxv4HUGG0rPUje4HC/8=
   dependencies:
-    bi-open "1.1.0"
+    bi-open "2.0.0"
 
-bi-open@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-1.1.0.tgz#0e21c3ae0dad7a9dd1e16bcd1a5b4b3757272449"
-  integrity sha1-DiHDrg2tep3R4WvNGltLN1cnJEk=
+bi-open@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.0.tgz#2bc2f175f01d66e2af708d61cf3f7b1d78e1ba42"
+  integrity sha1-K8LxdfAdZuKvcI1hzz97HXjhukI=
   dependencies:
-    bi-types "1.0.0-qbi311.20"
+    bi-types "1.0.0-qbi311.66"
     big.js "5.2.2"
 
-bi-types@1.0.0-qbi311.20:
-  version "1.0.0-qbi311.20"
-  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-1.0.0-qbi311.20.tgz#6e44c52cdfd6346e9692fb7a52bbb44cea726213"
-  integrity sha1-bkTFLN/WNG6Wkvt6Uru0TOpyYhM=
+bi-types@1.0.0-qbi311.66:
+  version "1.0.0-qbi311.66"
+  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-1.0.0-qbi311.66.tgz#4cdd3994b7912ad81c16757a701246793128d287"
+  integrity sha1-TN05lLeRKtgcFnV6cBJGeTEo0oc=
 
 big.js@5.2.2, big.js@^5.2.2:
   version "5.2.2"
