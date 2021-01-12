@@ -13,21 +13,22 @@ interface IColumnItem {
 }
 
 // 表格
-const BITable: React.FC<Interfaces.ComponentProps> = React.memo((props) => {
+const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
   const dataConfig = props.dataConfig;
   const viewConfig = props.viewConfig;
-  const action = props.action;
+  // @ts-ignore
+  const dispatch = props.dispatch;
   const fieldSettingMap = props.viewConfig?.fieldSettingMap;
 
   // 原始列
   const rawColumns: IColumnItem[] = React.useMemo(
     () =>
       (dataConfig ?? [])
-        .filter((each) => ["column", "row"].includes(each.areaType))
+        .filter(each => ["column", "row"].includes(each.areaType))
         .reduce((prev: any[], curr) => {
           return [...prev, ...(curr.fields ?? [])];
         }, [])
-        .map((each) => ({
+        .map(each => ({
           title: each.fieldName,
           dataIndex: each.fieldId,
         })),
@@ -45,12 +46,15 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo((props) => {
   }, [rootElem.current?.offsetHeight]);
 
   const handleSelect = React.useCallback(
-    (param) => {
-      if (typeof action?.select === "function") {
-        action?.select(param);
+    param => {
+      if (typeof dispatch === "function") {
+        dispatch({
+          type: "select",
+          payload: param,
+        });
       }
     },
-    [action?.select]
+    [dispatch]
   );
 
   // 全部列
@@ -101,7 +105,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo((props) => {
   const handleResize = React.useCallback(
     (column, newWidth) => {
       setColumns(
-        columns.map((each) => ({
+        columns.map(each => ({
           ...each,
           width: each.dataIndex === column.dataIndex ? newWidth : each.width,
         }))
@@ -111,7 +115,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo((props) => {
   );
 
   const ResizableTitle = React.useCallback(
-    (props) => <TitleRender {...props} onResize={handleResize} />,
+    props => <TitleRender {...props} onResize={handleResize} />,
     [handleResize]
   );
 

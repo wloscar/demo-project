@@ -72,10 +72,9 @@ module.exports = {
       ]
     ),
     addWebpackExternals({
-      react: "React",
-      "react-dom": "ReactDOM",
-      lodash: "_",
-      i18n: "i18n",
+      // react: "React",
+      // "react-dom": "ReactDOM",
+      // lodash: "_",
     }),
     disableChunk(),
     rewireWebpack
