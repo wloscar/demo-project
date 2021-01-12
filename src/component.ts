@@ -65,10 +65,13 @@ class MyComponent {
   bindEvents(props: Interfaces.LifecycleProps) {
     this.chart.on("click", "series", (serie: any) => {
       //@ts-ignore
-      if (typeof props.customProps.action.select === "function") {
+      if (typeof props.customProps.dispatch === "function") {
         //@ts-ignore
-        props.customProps.action.select({
-          dataIndex: serie.dataIndex,
+        props.customProps.dispatch({
+          type: "select",
+          payload: {
+            dataIndex: serie.dataIndex,
+          },
         });
       }
     });
@@ -81,6 +84,8 @@ class MyComponent {
     root.classList.add("test-component");
     props.container.appendChild(root);
     this.chart = echarts.init(root);
+
+    console.log(111, props);
 
     this.bindEvents(props);
     console.log("trigger when component mount");
