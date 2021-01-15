@@ -1425,25 +1425,25 @@ bfj@^6.1.1:
     hoopy "^0.1.4"
     tryer "^1.0.1"
 
-bi-open-sdk@^2.0.0-beta.3:
-  version "2.0.0-beta.3"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-2.0.0-beta.3.tgz#c6c22a6d938ec5667041850cbbadf3415929e68d"
-  integrity sha1-xsIqbZOOxWZwQYUMu63zQVkp5o0=
+bi-open-sdk@^2.0.0-beta.8:
+  version "2.0.0-beta.8"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-2.0.0-beta.8.tgz#c1c8144e377dfff3190de4114cd2f8fe9a366795"
+  integrity sha1-wcgUTjd9//MZDeQRTNL4/po2Z5U=
   dependencies:
-    bi-open "2.0.0-beta.3"
+    bi-open "2.0.0-beta.8"
 
-bi-open@2.0.0-beta.3:
-  version "2.0.0-beta.3"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.0-beta.3.tgz#90a7df8a33f395c53ed79305337a928c1d527078"
-  integrity sha1-kKffijPzlcU+15MFM3qSjB1ScHg=
+bi-open@2.0.0-beta.8:
+  version "2.0.0-beta.8"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.0-beta.8.tgz#071b5ba9f44fbb8e0894109838fd3f669f41cbc2"
+  integrity sha1-BxtbqfRPu44IlBCYOP0/Zp9By8I=
   dependencies:
-    bi-types "2.0.0-beta.3"
+    bi-types "2.0.0-beta.8"
     big.js "5.2.2"
 
-bi-types@2.0.0-beta.3:
-  version "2.0.0-beta.3"
-  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-2.0.0-beta.3.tgz#77611ebc0579f9eae2a8cf3f5d1d012c09d431d8"
-  integrity sha1-d2EevAV5+eriqM8/XR0BLAnUMdg=
+bi-types@2.0.0-beta.8:
+  version "2.0.0-beta.8"
+  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-2.0.0-beta.8.tgz#5de9b4138d7b21bcfda5e3779b9bf52ecaff646c"
+  integrity sha1-Xem0E417Ibz9peN3m5v1Lsr/ZGw=
 
 big.js@5.2.2, big.js@^5.2.2:
   version "5.2.2"

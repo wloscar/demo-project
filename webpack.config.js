@@ -3,6 +3,6 @@ module.exports = {
   devServer: {
     port: 8001,
     https: true,
-    host: "127.0.0.1",
+    host: '127.0.0.1',
   },
 };
