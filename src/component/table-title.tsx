@@ -1,11 +1,11 @@
 /**
  * @flie 开放组件入口文件
  */
-import * as React from "react";
-import { useEventListener } from "./utils";
+import * as React from 'react';
+import { useEventListener } from './utils';
 
 // 可拖动表头
-export const TitleRender: React.FC<any> = React.memo((props) => {
+export const TitleRender: React.FC<any> = React.memo(props => {
   const { children, column, onResize, ...restProps } = props;
   const ref = React.useRef(null);
   const [dragging, setDragging] = React.useState(false);
@@ -26,7 +26,7 @@ export const TitleRender: React.FC<any> = React.memo((props) => {
         setOffset(diff);
       }
     },
-    [xStart, ref.current?.offsetWidth]
+    [xStart, ref.current?.offsetWidth],
   );
 
   const handleDragEnd = React.useCallback(
@@ -34,18 +34,18 @@ export const TitleRender: React.FC<any> = React.memo((props) => {
       e.stopPropagation();
       // e.nativeEvent.stopImmediatePropagation();
       setDragging(false);
-      if (typeof onResize === "function") {
+      if (typeof onResize === 'function') {
         onResize(column, e.clientX - xStart + (ref.current?.offsetWidth ?? 0));
       }
     },
-    [xStart, column, onResize, ref.current?.offsetWidth]
+    [xStart, column, onResize, ref.current?.offsetWidth],
   );
 
   const dragRef = React.useRef(null);
 
-  useEventListener(dragRef.current, "dragstart", handleDragStart);
-  useEventListener(dragRef.current, "drag", handleDrag);
-  useEventListener(dragRef.current, "dragend", handleDragEnd);
+  useEventListener(dragRef.current, 'dragstart', handleDragStart);
+  useEventListener(dragRef.current, 'drag', handleDrag);
+  useEventListener(dragRef.current, 'dragend', handleDragEnd);
 
   return (
     <th {...restProps} ref={ref}>

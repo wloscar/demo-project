@@ -1,3 +1,3 @@
-import Component from "./table";
+import Component from './table';
 
 export default Component;

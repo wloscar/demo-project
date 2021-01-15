@@ -1,10 +1,10 @@
 /**
  * @flie 开放组件入口文件
  */
-import * as React from "react";
-import { Interfaces, Utils } from "bi-open-react-sdk";
-import Table from "rc-table";
-import { TitleRender } from "./table-title";
+import * as React from 'react';
+import { Interfaces, Utils } from 'bi-open-react-sdk';
+import Table from 'rc-table';
+import { TitleRender } from './table-title';
 
 interface IColumnItem {
   dataIndex: string;
@@ -16,7 +16,6 @@ interface IColumnItem {
 const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
   const dataConfig = props.dataConfig;
   const viewConfig = props.viewConfig;
-  // @ts-ignore
   const dispatch = props.dispatch;
   const fieldSettingMap = props.viewConfig?.fieldSettingMap;
 
@@ -24,7 +23,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
   const rawColumns: IColumnItem[] = React.useMemo(
     () =>
       (dataConfig ?? [])
-        .filter(each => ["column", "row"].includes(each.areaType))
+        .filter(each => ['column', 'row'].includes(each.areaType))
         .reduce((prev: any[], curr) => {
           return [...prev, ...(curr.fields ?? [])];
         }, [])
@@ -32,7 +31,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
           title: each.fieldName,
           dataIndex: each.fieldId,
         })),
-    [dataConfig]
+    [dataConfig],
   );
 
   const rootElem = React.useRef<HTMLDivElement>(null);
@@ -47,14 +46,14 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
 
   const handleSelect = React.useCallback(
     param => {
-      if (typeof dispatch === "function") {
+      if (typeof dispatch === 'function') {
         dispatch({
-          type: "select",
+          type: 'select',
           payload: param,
         });
       }
     },
-    [dispatch]
+    [dispatch],
   );
 
   // 全部列
@@ -70,11 +69,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
         render: (text: any, record: any, index: number) => {
           let displayText = text;
           if (fieldSettingMap?.[each.dataIndex] !== undefined) {
-            displayText = Utils.Format.numberWithConfig(
-              text,
-              null,
-              fieldSettingMap?.[each.dataIndex]?.numberFormat
-            );
+            displayText = Utils.Format.numberWithConfig(text, null, fieldSettingMap?.[each.dataIndex]?.numberFormat);
           }
 
           return (
@@ -88,7 +83,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
           );
         },
       })),
-    [rawColumns, handleSelect, fieldSettingMap]
+    [rawColumns, handleSelect, fieldSettingMap],
   );
 
   const [columns, setColumns] = React.useState(allColumns);
@@ -97,10 +92,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
   }, [allColumns]);
 
   // 表格宽度
-  const width = columns.reduce(
-    (prev: number, curr) => prev + (curr.width ?? 0),
-    0
-  );
+  const width = columns.reduce((prev: number, curr) => prev + (curr.width ?? 0), 0);
 
   const handleResize = React.useCallback(
     (column, newWidth) => {
@@ -108,16 +100,13 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
         columns.map(each => ({
           ...each,
           width: each.dataIndex === column.dataIndex ? newWidth : each.width,
-        }))
+        })),
       );
     },
-    [columns]
+    [columns],
   );
 
-  const ResizableTitle = React.useCallback(
-    props => <TitleRender {...props} onResize={handleResize} />,
-    [handleResize]
-  );
+  const ResizableTitle = React.useCallback(props => <TitleRender {...props} onResize={handleResize} />, [handleResize]);
 
   // 原始数据
   const rawData = React.useMemo(
@@ -128,20 +117,18 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
             ...prev,
             [curr.fieldId]: curr.value,
           }),
-          {}
+          {},
         );
       }),
-    [props?.data]
+    [props?.data],
   );
 
   return (
     <div
-      className={`test-table ${
-        viewConfig?.chartprop?.theme === "black" ? "black" : ""
-      }`}
+      className={`test-table ${viewConfig.chartSkin.key === 'black' ? 'black' : ''}`}
       style={{
-        width: "100%",
-        height: "100%",
+        width: '100%',
+        height: '100%',
       }}
       ref={rootElem}
     >

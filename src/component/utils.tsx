@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 // 绑定原生dom事件
 export function useEventListener(
@@ -9,7 +9,7 @@ export function useEventListener(
     capture?: boolean;
     once?: boolean;
     passive?: boolean;
-  }
+  },
 ) {
   const savedHandler = React.useRef(null);
   const { capture, passive, once } = options ?? {};
