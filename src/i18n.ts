@@ -1,6 +1,6 @@
-import { Utils } from 'bi-open-sdk';
+import { I18n } from 'bi-open-sdk';
 
-const { t } = Utils.I18n.init({
+const { t, i18n } = I18n.init({
   resources: {
     'en-US': {
       显示设置: 'display setting',
@@ -15,4 +15,13 @@ const { t } = Utils.I18n.init({
   },
 });
 
-export { t };
+/**
+ * 国际化词条绑定在全局对象上, meta 和 component 就可以复用
+ * 从而减少打包体积
+ */
+(window as any).biI18n = {
+  t,
+  i18n,
+};
+
+export { t, i18n };

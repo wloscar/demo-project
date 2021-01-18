@@ -1425,25 +1425,25 @@ bfj@^6.1.1:
     hoopy "^0.1.4"
     tryer "^1.0.1"
 
-bi-open-sdk@^2.0.0-beta.8:
-  version "2.0.0-beta.8"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-2.0.0-beta.8.tgz#c1c8144e377dfff3190de4114cd2f8fe9a366795"
-  integrity sha1-wcgUTjd9//MZDeQRTNL4/po2Z5U=
+bi-open-sdk@^2.0.0-beta.9:
+  version "2.0.0-beta.9"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-2.0.0-beta.9.tgz#de534137f2810e43c116945246b62b7c01e9097c"
+  integrity sha1-3lNBN/KBDkPBFpRSRrYrfAHpCXw=
   dependencies:
-    bi-open "2.0.0-beta.8"
+    bi-open "2.0.0-beta.10"
 
-bi-open@2.0.0-beta.8:
-  version "2.0.0-beta.8"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.0-beta.8.tgz#071b5ba9f44fbb8e0894109838fd3f669f41cbc2"
-  integrity sha1-BxtbqfRPu44IlBCYOP0/Zp9By8I=
+bi-open@2.0.0-beta.10:
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.0-beta.10.tgz#252a705996e6859cd8939d2da0d7b8d1faf16964"
+  integrity sha1-JSpwWZbmhZzYk50toNe40frxaWQ=
   dependencies:
-    bi-types "2.0.0-beta.8"
+    bi-types "2.0.0-beta.10"
     big.js "5.2.2"
 
-bi-types@2.0.0-beta.8:
-  version "2.0.0-beta.8"
-  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-2.0.0-beta.8.tgz#5de9b4138d7b21bcfda5e3779b9bf52ecaff646c"
-  integrity sha1-Xem0E417Ibz9peN3m5v1Lsr/ZGw=
+bi-types@2.0.0-beta.10:
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-2.0.0-beta.10.tgz#39340da0c4586820906339554d49b940484542b5"
+  integrity sha1-OTQNoMRYaCCQYzlVTUm5QEhFQrU=
 
 big.js@5.2.2, big.js@^5.2.2:
   version "5.2.2"
@@ -4039,6 +4039,11 @@ lodash.isplainobject@^4.0.6:
   resolved "https://registry.npm.alibaba-inc.com/lodash.isplainobject/download/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
   integrity sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=
 
+lodash.merge@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.npm.alibaba-inc.com/lodash.merge/download/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha1-VYqlO0O2YeGSWgr9+japoQhf5Xo=
+
 lodash.template@4.5.0:
   version "4.5.0"
   resolved "https://registry.npm.alibaba-inc.com/lodash.template/download/lodash.template-4.5.0.tgz#f976195cf3f347d0d5f52483569fe8031ccce8ab"
@@ -5008,10 +5013,10 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.npm.alibaba-inc.com/punycode/download/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha1-tYsBCsQMIsVldhbI0sLALHv0eew=
 
-qbi-dev-tools@^0.1.14:
-  version "0.1.14"
-  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-0.1.14.tgz#929a57538eec111660e71fc1f78199ced2e3d911"
-  integrity sha1-kppXU47sERZg5x/B94GZztLj2RE=
+qbi-dev-tools@^0.1.15:
+  version "0.1.15"
+  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-0.1.15.tgz#5d96caee80acb8d3c05e3a2f5809deeed567f10f"
+  integrity sha1-XZbK7oCsuNPAXjovWAne7tVn8Q8=
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/plugin-syntax-dynamic-import" "7.8.3"
@@ -5042,6 +5047,7 @@ qbi-dev-tools@^0.1.14:
     lodash.difference "4.5.0"
     lodash.findindex "4.6.0"
     lodash.isequal "4.5.0"
+    lodash.merge "^4.6.2"
     lodash.template "4.5.0"
     mini-css-extract-plugin "^0.9.0"
     multi-loader "0.1.0"

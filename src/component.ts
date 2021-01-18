@@ -4,6 +4,11 @@
 import * as echarts from 'echarts';
 import { Interfaces, Utils } from 'bi-open-sdk';
 import './index.less';
+/**
+ * 注意在组件中引入国际化时
+ * 需要通过 import { t } from 'bi-i18n' 的方式引入
+ */
+import { t } from 'bi-i18n';
 
 class MyComponent {
   chart: echarts.ECharts;
@@ -89,7 +94,7 @@ class MyComponent {
             let value = param.value;
             const fieldSetting = fieldSettingMap[param.seriesId];
             if (fieldSetting?.numberFormat) {
-              value = Utils.Format.numberWithConfig(value, null, fieldSetting.numberFormat);
+              value = Utils.formatNumberWithConfig(value, fieldSetting.numberFormat);
             }
 
             return `${param.seriesName}<br />${param.marker}${value}`;
