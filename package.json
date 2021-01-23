@@ -4,18 +4,15 @@
   "author": "",
   "description": "",
   "scripts": {
-    "copy": "cross-env cp package.json build/package.json",
-    "pack": "cross-env rm -rf build && npm run build && npm run copy && npm run zip",
-    "zip": "cross-env qbi pack",
-    "start": "cross-env qbi start",
-    "build": "cross-env qbi build"
+    "pack": "cross-env npm run build && qbi pack",
+    "start": "cross-env NODE_ENV=development qbi start",
+    "build": "cross-env NODE_ENV=production qbi build"
   },
   "license": "ISC",
   "devDependencies": {
     "@types/echarts": "^4.6.5",
     "cross-env": "^7.0.3",
-    "qbi-dev-tools": "^0.1.15",
-    "typescript": "^4.0.3"
+    "qbi-dev-tools": "^1.0.0-beta.2"
   },
   "dependencies": {
     "bi-open-sdk": "^2.0.0-beta.9",

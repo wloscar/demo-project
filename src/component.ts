@@ -3,7 +3,8 @@
  */
 import * as echarts from 'echarts';
 import { Interfaces, Utils } from 'bi-open-sdk';
-import './index.less';
+import './index.scss';
+
 /**
  * 注意在组件中引入国际化时
  * 需要通过 import { t } from 'bi-i18n' 的方式引入
@@ -91,13 +92,10 @@ class MyComponent {
           backgroundColor: viewConfig.chartSkin.key === 'black' ? '#222' : '#fff',
           extraCssText: 'box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);',
           formatter: (param: any) => {
-            let value = param.value;
             const fieldSetting = fieldSettingMap[param.seriesId];
-            if (fieldSetting?.numberFormat) {
-              value = Utils.formatNumberWithConfig(value, fieldSetting.numberFormat);
-            }
+            const value = Utils.formatNumberWithConfig(param.value, fieldSetting?.numberFormat);
 
-            return `${param.seriesName}<br />${param.marker}${value}`;
+            return `${param.seriesName}<br />${param.name}: ${param.marker}${value}`;
           },
         },
         series,
