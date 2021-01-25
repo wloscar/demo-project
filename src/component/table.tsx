@@ -5,6 +5,7 @@ import * as React from 'react';
 import { Interfaces, Utils } from 'bi-open-react-sdk';
 import Table from 'rc-table';
 import { TitleRender } from './table-title';
+import { t } from './i18n';
 
 interface IColumnItem {
   dataIndex: string;
@@ -67,10 +68,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
           column,
         }),
         render: (text: any, record: any, index: number) => {
-          let displayText = text;
-          if (fieldSettingMap?.[each.dataIndex] !== undefined) {
-            displayText = Utils.Format.numberWithConfig(text, null, fieldSettingMap?.[each.dataIndex]?.numberFormat);
-          }
+          const displayText = Utils.formatNumberWithConfig(text, fieldSettingMap?.[each.dataIndex]?.numberFormat);
 
           return (
             <div
@@ -78,7 +76,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
                 handleSelect({ dataIndex: index });
               }}
             >
-              {displayText}
+              {displayText || t('暂无数据')}
             </div>
           );
         },

@@ -1531,25 +1531,25 @@ batch@0.6.1:
   resolved "https://registry.npm.alibaba-inc.com/batch/download/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
   integrity sha1-3DQxT05nkxgJP8dgJyUl+UvyXBY=
 
-bi-open-react-sdk@^2.0.0-beta.6:
-  version "2.0.0-beta.6"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open-react-sdk/download/bi-open-react-sdk-2.0.0-beta.6.tgz#592dfcc4aa02482e21b74cb982a566cadadb3172"
-  integrity sha1-WS38xKoCSC4ht0y5gqVmytrbMXI=
+bi-open-react-sdk@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open-react-sdk/download/bi-open-react-sdk-2.0.1.tgz#35fd955b89a1e8a47a379316397140aedd6e201a"
+  integrity sha1-Nf2VW4mh6KR6N5MWOXFArt1uIBo=
   dependencies:
-    bi-open "2.0.0-beta.9"
+    bi-open "2.0.2"
 
-bi-open@2.0.0-beta.9:
-  version "2.0.0-beta.9"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.0-beta.9.tgz#e0cc47380a0aef0b4c268b36c775787cb5c68d0c"
-  integrity sha1-4MxHOAoK7wtMJos2x3V4fLXGjQw=
+bi-open@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.2.tgz#5f5f1020a00790ae9461f869b398fb21058ef3dd"
+  integrity sha1-X18QIKAHkK6UYfhps5j7IQWO890=
   dependencies:
-    bi-types "2.0.0-beta.9"
+    bi-types "2.0.2"
     big.js "5.2.2"
 
-bi-types@2.0.0-beta.9:
-  version "2.0.0-beta.9"
-  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-2.0.0-beta.9.tgz#6be4fc09496c4097c316ddda97956c3e6f899e2e"
-  integrity sha1-a+T8CUlsQJfDFt3al5VsPm+Jni4=
+bi-types@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-2.0.2.tgz#b36f1089e43c5954911e302a33607115ddbb50bd"
+  integrity sha1-s28QieQ8WVSRHjAqM2BxFd27UL0=
 
 big.js@5.2.2, big.js@^5.2.2:
   version "5.2.2"

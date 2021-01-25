@@ -1,7 +1,22 @@
 /**
  * 导出组件的相关配置
  */
-import { Interfaces } from 'bi-open-react-sdk';
+import { Interfaces, I18n } from 'bi-open-react-sdk';
+
+const { t } = I18n.init({
+  resources: {
+    'en-US': {
+      显示设置: 'display setting',
+      显示图例: 'display legend',
+      起始角度: 'start angle',
+      请输出起始角度: 'please input start angle',
+      '钻取/维度': 'drill / area',
+      维度: 'area',
+      度量: 'column',
+      过滤器: 'filter',
+    },
+  },
+});
 
 const componentMeta: Interfaces.ComponentMeta = {
   propsSchema: {
@@ -14,7 +29,7 @@ const componentMeta: Interfaces.ComponentMeta = {
           // 请在此处填写你需要自定义的属性
           display: {
             type: 'object',
-            title: '显示设置',
+            title: t('显示设置'),
             properties: {
               showLegend: {
                 type: 'switch',
@@ -22,17 +37,7 @@ const componentMeta: Interfaces.ComponentMeta = {
                 defaultValue: true,
                 props: {
                   mode: 'checkbox',
-                  label: '显示图例',
-                },
-              },
-              startAngle: {
-                title: '其实角度',
-                id: 'startAngle',
-                type: 'number',
-                defaultValue: 0,
-                props: {
-                  placeholder: '请输出起始角度',
-                  maxLength: 140,
+                  label: t('显示图例'),
                 },
               },
             },
@@ -45,7 +50,7 @@ const componentMeta: Interfaces.ComponentMeta = {
         area: [
           {
             id: 'drill',
-            areaName: '钻取/维度',
+            areaName: t('钻取/维度'),
             queryAxis: 'drill',
             rule: {
               show: false,
@@ -58,7 +63,7 @@ const componentMeta: Interfaces.ComponentMeta = {
           },
           {
             id: 'area_row',
-            areaName: '维度',
+            areaName: t('维度'),
             queryAxis: 'row',
             rule: {
               type: 'dimension', // 维度还是计量,都可以接受为all
@@ -69,7 +74,7 @@ const componentMeta: Interfaces.ComponentMeta = {
           },
           {
             id: 'area_column',
-            areaName: '度量',
+            areaName: t('度量'),
             queryAxis: 'column',
             rule: {
               type: 'measure', // 维度还是计量,都可以接受为all
@@ -80,7 +85,7 @@ const componentMeta: Interfaces.ComponentMeta = {
           },
           {
             id: 'filters',
-            areaName: '过滤器', //  名称
+            areaName: t('过滤器'), //  名称
             queryAxis: 'filters',
             rule: {
               type: 'all',
@@ -89,8 +94,6 @@ const componentMeta: Interfaces.ComponentMeta = {
             columnList: [],
           },
         ],
-        distinct: false,
-        refresh: -1, //  default
         /** 限制条数 */
         limitNum: 1000,
       },

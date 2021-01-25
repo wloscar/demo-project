@@ -4,9 +4,6 @@ module.exports = {
     BIComponentMeta: './src/meta.ts',
     BIComponent: './src/index.tsx',
   },
-  externals: {
-    'bi-i18n': 'biI18n',
-  },
   devServer: {
     port: 8002,
     https: true,
