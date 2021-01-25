@@ -4,12 +4,7 @@
 import * as echarts from 'echarts';
 import { Interfaces, Utils } from 'bi-open-sdk';
 import './index.scss';
-
-/**
- * 注意在组件中引入国际化时
- * 需要通过 import { t } from 'bi-i18n' 的方式引入
- */
-import { t } from 'bi-i18n';
+import { t } from './i18n';
 
 class MyComponent {
   chart: echarts.ECharts;
@@ -95,7 +90,7 @@ class MyComponent {
             const fieldSetting = fieldSettingMap[param.seriesId];
             const value = Utils.formatNumberWithConfig(param.value, fieldSetting?.numberFormat);
 
-            return `${param.seriesName}<br />${param.name}: ${param.marker}${value}`;
+            return `${param.seriesName ?? t('暂无数据')}<br />${param.name}: ${param.marker}${value}`;
           },
         },
         series,

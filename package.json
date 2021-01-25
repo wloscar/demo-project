@@ -15,7 +15,7 @@
     "qbi-dev-tools": "^1.0.0-beta.2"
   },
   "dependencies": {
-    "bi-open-sdk": "^2.0.0-beta.9",
+    "bi-open-sdk": "^2.0.1",
     "echarts": "^4.8.0"
   },
   "browserslist": [

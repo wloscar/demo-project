@@ -1,8 +1,22 @@
 /**
  * 导出组件的相关配置
  */
-import { Interfaces } from 'bi-open-sdk';
-import { t } from './i18n';
+import { Interfaces, I18n } from 'bi-open-sdk';
+
+const { t } = I18n.init({
+  resources: {
+    'en-US': {
+      显示设置: 'display setting',
+      显示图例: 'display legend',
+      起始角度: 'start angle',
+      请输出起始角度: 'please input start angle',
+      '钻取/维度': 'drill / area',
+      维度: 'area',
+      度量: 'column',
+      过滤器: 'filter',
+    },
+  },
+});
 
 const componentMeta: Interfaces.ComponentMeta = {
   propsSchema: {
@@ -90,8 +104,6 @@ const componentMeta: Interfaces.ComponentMeta = {
             columnList: [],
           },
         ],
-        distinct: false,
-        refresh: -1, //  default
         /** 限制条数 */
         limitNum: 1000,
       },

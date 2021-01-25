@@ -18,10 +18,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "baseUrl": ".",
-    "paths": {
-      "bi-i18n": ["src/i18n.ts"]
-    }
+    "baseUrl": "."
   },
   "include": ["src/**/*"]
 }
