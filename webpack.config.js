@@ -5,7 +5,7 @@ module.exports = {
     BIComponent: './src/index.tsx',
   },
   devServer: {
-    port: 8002,
+    port: 8001,
     https: true,
   },
 };
