@@ -63,7 +63,6 @@ const componentMeta: Interfaces.ComponentMeta = {
             areaName: t('钻取/维度'),
             queryAxis: 'drill',
             rule: {
-              show: false,
               type: 'dimension', // 维度还是计量,都可以接受为all
               required: false, // 是否是更新图表必须字段
               /** 限制数量 */
