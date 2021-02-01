@@ -14,14 +14,11 @@
 ├── node_modules         # 项目相关包依赖
 ├── public               # 本地调试入口
 │    └──index.html   		
-├── assets               # 静态资源
-│    └──icon.png    
 ├── src                  # 源码
 │    ├──index.tsx        # 组件模块入口
 │    ├──index.scss       # 组件样式文件
 │    └──meta.ts          # 组件属性配置，包括数据、样式以及数据到视图的映射关系等。
 ├── .eslintrc            # eslint插件的配置文件
-├── config-overrides.js  # webpack配置文件
 ├── package.json         # 依赖包管理
 ├── README.md            # 项目说明文档
 └── tsconfig.json        # typescript配置文件
