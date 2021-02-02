@@ -5244,10 +5244,10 @@ q@^1.1.2:
   resolved "https://registry.npm.alibaba-inc.com/q/download/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qbi-dev-tools@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-1.0.2.tgz#e22e3f544e420f1213a3fbcac19ac746b79a5202"
-  integrity sha1-4i4/VE5CDxITo/vKwZrHRreaUgI=
+qbi-dev-tools@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-1.0.3.tgz#b23617c21236e22f2d2888bf47cf0847de005164"
+  integrity sha1-sjYXwhI24i8tKIi/R88IR94AUWQ=
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/plugin-syntax-dynamic-import" "7.8.3"
