@@ -8,4 +8,10 @@ module.exports = {
     port: 8001,
     https: true,
   },
+  externals: {
+    lodash: '_',
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    moment: 'moment',
+  },
 };

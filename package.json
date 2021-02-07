@@ -10,16 +10,16 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@types/lodash": "^4.14.167",
+    "@types/lodash": "^4.14.168",
+    "@types/react": "^17.0.1",
     "@types/react-dom": "^16.9.8",
     "cross-env": "^7.0.3",
+    "moment": "^2.29.1",
     "qbi-dev-tools": "^1.0.3"
   },
   "dependencies": {
     "bi-open-react-sdk": "^2.0.1",
-    "rc-table": "^7.12.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "rc-table": "^7.12.2"
   },
   "browserslist": [
     ">0.2%",
