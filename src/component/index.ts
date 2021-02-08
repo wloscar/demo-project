@@ -153,8 +153,6 @@ class MyComponent {
   update(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
     this.setOption(props);
 
-    console.log(111, props);
-
     // 容器大小变更时触发 resize
     if (
       this.lastProps.width !== props.customProps.viewConfig.width ||
