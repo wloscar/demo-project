@@ -1,4 +1,4 @@
-const props = {
+export const props = {
   viewConfig: {
     display: {
       showLegend: true,
@@ -426,8 +426,3 @@ const props = {
   },
   action: {},
 };
-
-window.BIComponent.mount({
-  container: document.getElementById('root'),
-  customProps: props,
-});
