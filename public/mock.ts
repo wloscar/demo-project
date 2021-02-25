@@ -1,4 +1,4 @@
-const props = {
+export const props = {
   viewConfig: {
     display: {
       showLegend: true,
@@ -403,8 +403,3 @@ const props = {
     renderMode: 'edit',
   },
 };
-
-window.BIComponent.mount({
-  container: document.getElementById('chart'),
-  customProps: props,
-});
