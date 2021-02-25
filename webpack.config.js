@@ -5,4 +5,10 @@ module.exports = {
     https: true,
     host: '127.0.0.1',
   },
+  externals: {
+    lodash: '_',
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    moment: 'moment',
+  },
 };
