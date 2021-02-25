@@ -3,7 +3,7 @@
  */
 import * as echarts from 'echarts';
 import { Interfaces, Utils } from 'bi-open-sdk';
-import './index.scss';
+import styles from './index.module.scss';
 import { t } from './i18n';
 
 class MyComponent {
@@ -139,7 +139,7 @@ class MyComponent {
    * mount 生命周期, 在渲染时触发
    */
   mount(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
-    props.container.classList.add('test-component');
+    props.container.classList.add(styles['test-component']);
     this.chart = echarts.init(props.container as HTMLDivElement);
 
     this.bindEvents(props);
@@ -152,6 +152,8 @@ class MyComponent {
    */
   update(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
     this.setOption(props);
+
+    console.log(111, props);
 
     // 容器大小变更时触发 resize
     if (
