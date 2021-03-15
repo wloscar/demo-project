@@ -1,5 +1,9 @@
 /* 为了保证打包产物的稳定性，目前仅仅开放devServer相关配置项 */
 module.exports = {
+  entry: {
+    BIComponentMeta: './src/meta.ts',
+    BIComponent: './src/index.ts',
+  },
   devServer: {
     port: 8001,
     https: true,
@@ -10,6 +14,5 @@ module.exports = {
     react: 'React',
     'react-dom': 'ReactDOM',
     moment: 'moment',
-    echarts: 'echarts'
   },
 };

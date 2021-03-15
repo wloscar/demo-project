@@ -1,28 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { props } from './mock';
+import './index.scss';
+import { App } from './context';
+import { SettingPanel } from './component/SettingPanel';
+import { Canvas } from './component/Canvas';
 
-const Demo = () => {
-  const ref = React.createRef<HTMLDivElement>();
-
-  React.useEffect(() => {
-    if (ref.current) {
-      (window as any).BIComponent.mount({
-        container: ref.current,
-        customProps: props,
-      });
-    }
-  }, [ref]);
-
+const Demo: React.FC = React.memo(() => {
   return (
-    <div
-      ref={ref}
-      style={{
-        width: '100%',
-        height: '100%',
-      }}
-    />
+    <App>
+      <div className="demo-layout">
+        <div className="demo-action-panel"></div>
+        <div className="demo-canvas-panel">
+          <Canvas></Canvas>
+        </div>
+        <div className="demo-setting-panel">
+          <SettingPanel></SettingPanel>
+        </div>
+      </div>
+    </App>
   );
-};
+});
 
 ReactDOM.render(<Demo />, document.getElementById('root'));

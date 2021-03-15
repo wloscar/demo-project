@@ -1,4 +1,4 @@
-export const props = {
+export const data = {
   viewConfig: {
     display: {
       showLegend: true,
@@ -46,7 +46,7 @@ export const props = {
       color: null,
       show: true,
     },
-    caption: 'z1',
+    caption: 'demo组件标题',
     width: 471,
     height: 426,
     linkageParam: null,
