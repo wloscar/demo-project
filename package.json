@@ -11,7 +11,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@types/echarts": "^4.6.5",
+    "@types/echarts": "^4.9.6",
     "@types/lodash": "^4.14.168",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
@@ -31,7 +31,7 @@
     "ui-schema-lite": "^0.0.1-alpha.2"
   },
   "dependencies": {
-    "bi-open-sdk": "^2.0.1",
+    "bi-open-sdk": "^2.0.3",
     "echarts": "^5.0.2"
   },
   "browserslist": [

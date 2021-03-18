@@ -965,10 +965,10 @@
   resolved "https://registry.npm.alibaba-inc.com/@types/anymatch/download/@types/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
   integrity sha1-M2utwb7sudrMOL6izzKt9ieoQho=
 
-"@types/echarts@^4.6.5":
-  version "4.6.5"
-  resolved "https://registry.npm.alibaba-inc.com/@types/echarts/download/@types/echarts-4.6.5.tgz#6aba35e7d5fdb97f0852865a11ad1cd52f0b72fe"
-  integrity sha1-aro159X9uX8IUoZaEa0c1S8Lcv4=
+"@types/echarts@^4.9.6":
+  version "4.9.6"
+  resolved "https://registry.npm.alibaba-inc.com/@types/echarts/download/@types/echarts-4.9.6.tgz#20c9875bf6911dc077728d800b15f2496131c904"
+  integrity sha1-IMmHW/aRHcB3co2ACxXySWExyQQ=
   dependencies:
     "@types/zrender" "*"
 
@@ -1712,30 +1712,30 @@ batch@0.6.1:
   resolved "https://registry.npm.alibaba-inc.com/batch/download/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
   integrity sha1-3DQxT05nkxgJP8dgJyUl+UvyXBY=
 
-bi-open-sdk@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-2.0.1.tgz#f9689c947b95ea1e39f96048c9cba892a250812b"
-  integrity sha1-+WiclHuV6h45+WBIycuokqJQgSs=
+bi-open-sdk@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open-sdk/download/bi-open-sdk-2.0.3.tgz#ad28e1023c78370538c8a81720d31206543f9a51"
+  integrity sha1-rSjhAjx4NwU4yKgXINMSBlQ/mlE=
   dependencies:
-    bi-open "2.0.1"
+    bi-open "2.0.5"
 
-bi-open@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.1.tgz#f45b0001d77a81ee53b68c09cab94b765576b1d0"
-  integrity sha1-9FsAAdd6ge5TtowJyrlLdlV2sdA=
+bi-open@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.npm.alibaba-inc.com/bi-open/download/bi-open-2.0.5.tgz#8c788f9d5b17f3b71f24871e35d4c763aaa56442"
+  integrity sha1-jHiPnVsX87cfJIceNdTHY6qlZEI=
   dependencies:
-    bi-types "2.0.1"
+    bi-types "2.0.6"
     big.js "5.2.2"
-
-bi-types@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-2.0.1.tgz#01d88987fe72ad79755dd78ef6d1abeea9e2640a"
-  integrity sha1-AdiJh/5yrXl1XdeO9tGr7qniZAo=
 
 bi-types@2.0.2-alpha.2:
   version "2.0.2-alpha.2"
   resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-2.0.2-alpha.2.tgz#8f3b56dd6c3896692abdf8573eaf81114e4c18e8"
   integrity sha1-jztW3Ww4lmkqvfhXPq+BEU5MGOg=
+
+bi-types@2.0.6:
+  version "2.0.6"
+  resolved "https://registry.npm.alibaba-inc.com/bi-types/download/bi-types-2.0.6.tgz#90139c366ee337984616b91e5339819d5908d133"
+  integrity sha1-kBOcNm7jN5hGFrkeUzmBnVkI0TM=
 
 big.js@5.2.2, big.js@^5.2.2:
   version "5.2.2"

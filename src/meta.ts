@@ -107,6 +107,19 @@ const componentMeta: Interfaces.ComponentMeta = {
         limitNum: 1000,
       },
     },
+
+    menuSchema: {
+      schema: {
+        menu1: {
+          title: '取消联动',
+          onClick: ref => {
+            ref.customProps.dispatch({
+              type: 'cancelLinkage',
+            });
+          },
+        },
+      },
+    },
   },
 };
 

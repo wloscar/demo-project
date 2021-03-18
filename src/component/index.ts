@@ -3,7 +3,7 @@
  */
 import * as echarts from 'echarts';
 import { Interfaces, Utils } from 'bi-open-sdk';
-import styles from './index.module.scss';
+import './index.scss';
 import { t } from './i18n';
 
 class MyComponent {
@@ -114,12 +114,20 @@ class MyComponent {
     const customProps = props.customProps;
     const dispatch = customProps.dispatch;
     this.chart.on('click', (serie: any) => {
-      if (typeof dispatch === 'function') {
+      dispatch({
+        type: 'select',
+        payload: {
+          dataIndex: serie.dataIndex,
+        },
+      });
+    });
+
+    // 点击空白处事件
+    // @ts-ignore
+    this.chart.getZr().on('click', function (e) {
+      if (!e.target) {
         dispatch({
-          type: 'select',
-          payload: {
-            dataIndex: serie.dataIndex,
-          },
+          type: 'cancelSelect',
         });
       }
     });
@@ -139,7 +147,7 @@ class MyComponent {
    * mount 生命周期, 在渲染时触发
    */
   mount(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
-    props.container.classList.add(styles['test-component']);
+    props.container.classList.add('test-component');
     this.chart = echarts.init(props.container as HTMLDivElement);
 
     this.bindEvents(props);
