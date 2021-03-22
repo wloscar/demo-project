@@ -5898,10 +5898,10 @@ q@^1.1.2:
   resolved "https://registry.npm.alibaba-inc.com/q/download/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qbi-dev-tools@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-1.0.6.tgz#3c1169308331da2869c87dfc0c1ea1c86cef8fc5"
-  integrity sha1-PBFpMIMx2ihpyH38DB6hyGzvj8U=
+qbi-dev-tools@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npm.alibaba-inc.com/qbi-dev-tools/download/qbi-dev-tools-1.0.7.tgz#da0efd34baf48e47270b95303c20ee18a0b1e333"
+  integrity sha1-2g79NLr0jkcnC5UwPCDuGKCx4zM=
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/plugin-proposal-class-properties" "^7.13.0"

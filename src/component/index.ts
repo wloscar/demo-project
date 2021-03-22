@@ -148,6 +148,10 @@ class MyComponent {
    */
   mount(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
     props.container.classList.add('test-component');
+    if (!echarts) {
+      props.container.textContent = '无法获取 echarts, 请确保已经配置并加载了 echarts.js';
+      return;
+    }
     this.chart = echarts.init(props.container as HTMLDivElement);
 
     this.bindEvents(props);
@@ -163,8 +167,8 @@ class MyComponent {
 
     // 容器大小变更时触发 resize
     if (
-      this.lastProps.width !== props.customProps.viewConfig.width ||
-      this.lastProps.height !== props.customProps.viewConfig.height
+      this.lastProps?.width !== props.customProps.viewConfig.width ||
+      this.lastProps?.height !== props.customProps.viewConfig.height
     ) {
       this.chart.resize();
     }
