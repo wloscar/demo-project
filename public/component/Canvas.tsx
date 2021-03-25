@@ -6,8 +6,8 @@ import { Component } from './Component';
 
 export const Canvas: React.FC = React.memo(props => {
   const ref = React.createRef<HTMLDivElement>();
-  const { data, setCard } = useAppContext(state => ({
-    data: state.data,
+  const { customProps, setCard } = useAppContext(state => ({
+    customProps: state.customProps,
   }));
 
   React.useEffect(() => {
@@ -37,11 +37,11 @@ export const Canvas: React.FC = React.memo(props => {
   return React.useMemo(
     () => (
       <div className="demo-canvas" ref={ref}>
-        <Card title={data.viewConfig.caption}>
+        <Card title={customProps.viewConfig.caption}>
           <Component />
         </Card>
       </div>
     ),
-    [data, ref],
+    [customProps.viewConfig.caption, ref],
   );
 });

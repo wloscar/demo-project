@@ -1,5 +1,5 @@
 /**
- * @flie 开放组件入口文件
+ * @flie 自定义组件入口文件
  */
 import { createBIComponent } from 'bi-open-sdk';
 import Component from './component';

@@ -3,7 +3,7 @@ import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { useSelector, useDispatch, useStore, Provider } from 'react-redux';
 import { shallowEqualProp } from './utils';
-import { data } from './mock';
+import { customProps } from './mock';
 
 export const initialAppState = {
   card: {
@@ -14,7 +14,7 @@ export const initialAppState = {
     canvasWidth: 0,
     canvasHeight: 0,
   },
-  data,
+  customProps,
   setting: {},
 };
 
@@ -39,12 +39,15 @@ export const reducer = (state, action) => {
         },
       };
     }
-    case 'changeInstance': {
+    case 'changeCustomPropsViewConfig': {
       return {
         ...state,
-        instance: {
-          ...state.instance,
-          ...action.payload,
+        customProps: {
+          ...state.customProps,
+          viewConfig: {
+            ...state.customProps.viewConfig,
+            ...action.payload,
+          },
         },
       };
     }
@@ -100,10 +103,10 @@ export const useAppContext = (...selectors) => {
     [dispatch],
   );
 
-  const setInstance = React.useCallback(
+  const setCustomPropsViewConfig = React.useCallback(
     payload => {
       dispatch({
-        type: 'changeInstance',
+        type: 'changeCustomPropsViewConfig',
         payload,
       });
     },
@@ -114,8 +117,8 @@ export const useAppContext = (...selectors) => {
     ...selectorValues,
     store,
     dispatch,
-    setInstance,
     setCard,
+    setCustomPropsViewConfig,
   };
 };
 

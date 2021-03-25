@@ -14,6 +14,5 @@ module.exports = {
     react: 'React',
     'react-dom': 'ReactDOM',
     moment: 'moment',
-    echarts: 'echarts',
   },
 };

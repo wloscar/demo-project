@@ -292,7 +292,7 @@ export const Card: React.FC<Props> = React.memo(props => {
         });
       }
     },
-    [left, setCard, top, width],
+    [left, width, top, setCard],
   );
 
   return (

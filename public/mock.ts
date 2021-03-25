@@ -1,9 +1,5 @@
-export const data = {
+export const customProps = {
   viewConfig: {
-    display: {
-      showLegend: true,
-      startAngle: 1,
-    },
     fieldSettingMap: {
       '17e47929-c425-48ea-8a35-d0d5ae760263.d7780001-6d63-43e1-9ecd-74789a6b4fdb.[Nd77800_price]|SUM||': {
         uuid: 'e36fc2a2-e5e7-4135-9a50-4a50b69f09ba',
