@@ -68,7 +68,7 @@ const BITable: React.FC<Interfaces.ComponentProps> = React.memo(props => {
         }),
         render: (text: any, record: any, index: number) => {
           let displayText = text;
-          if (fieldSettingMap?.[each.dataIndex] !== undefined) {
+          if (fieldSettingMap?.[each.dataIndex]?.numberFormat !== undefined) {
             displayText = Utils.Format.numberWithConfig(text, null, fieldSettingMap?.[each.dataIndex]?.numberFormat);
           }
 
